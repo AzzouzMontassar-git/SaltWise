@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Agroecological Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+                <li><a href="practices.html">Agroecological practices</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="diagnostic.html">Diagnostic</a></li>
+                <li><a href="events.html">Events & Marketplace</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Library of Agroecological Resources</h1>
+        <p>Explore, download and upload helpful resources in PDF format.</p>
+    </section>
+
+    <section class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for a document..." onkeyup="searchDocuments()">
+    </section>
+
+    <section class="library">
+        <div class="pdf-item" data-title="Agroecology and Soil Health">
+            <a href="../pdf/salinisation.pdf" target="_blank">
+                <h3>soil salinization and management of salty soils</h3>
+                <p>A comprehensive guide on soil salinization and management of salty soils.</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Managing Salt-Affected Soils">
+            <a href="../pdf/salt-affected soils in India.pdf" target="_blank">
+                <h3>salt-affected soils in India</h3>
+                <p>Agronomic research in salt-affected soils in Inbdia.</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/Soil salinization in agriculture.pdf" target="_blank">
+                <h3>Sustainable Farming Practices</h3>
+                <p>Soil salinization in agriculture: Mitigation and Adaptation Strategies combining nature-based solutions and bioengineering.</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/salt-affected soils in Tunisia.pdf" target="_blank">
+                <h3>Salt-affected soils in Tunisia</h3>
+                <p>Salty soils and their development in Tunisia.</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/Agroforestry systems.pdf" target="_blank">
+                <h3>Agroforestry systems</h3>
+                <p>Greening Salty and Waterlogged Lands Through Agroforestry Systems for Livelihood Security and Better Environment.</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/amelioration of saline soils using gypsum.pdf" target="_blank">
+                <h3>amelioration of saline soils using gypsum</h3>
+                <p>Amelioration of Saline-sodic Soil using Gypsum and Low Quality Water in Following Sorghum-berseem Crop Rotation .</p>
+            </a>
+        </div>
+
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/Benefits_of_alfalfa_in_crop_rotations.pdf" target="_blank">
+                <h3>Benefits of alfalfa in crop rotations</h3>
+                <p>A research on the benefits of alfalfa in crop rotations .</p>
+            </a>
+        </div>
+        
+        <div class="pdf-item" data-title="Sustainable Farming Practices">
+            <a href="../pdf/Effect_of_Biochar_Compost_Tea_and_Magnetic_Iron_Or.pdf" target="_blank">
+                <h3>Effect of Biochar, Compost Tea and Magnetic Iron Ore on some Soil Properties and Productivity</h3>
+                <p>Effect of Biochar, Compost Tea and Magnetic Iron Ore Application on some Soil Properties and Productivity of Some Field Crops under Saline Soils Conditions at North Nile Delta.</p>
+            </a>
+        </div>
+        <!-- Add more PDF items here -->
+    </section>
+
+    <!-- Add resource form section -->
+    <section class="add-resource">
+        <h2>Add a Resource</h2>
+        <form id="addResourceForm" action="upload_resource.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="resource-title">Resource Title:</label>
+                <input type="text" id="resource-title" name="title" placeholder="Enter the resource title" required>
+            </div>
+            <div class="form-group">
+                <label for="resource-file">Upload PDF:</label>
+                <input type="file" id="resource-file" name="file" accept="application/pdf" required>
+            </div>
+            <button type="submit">Upload Resource</button>
+        </form>
+    </section>
+
+    <script>
+        function searchDocuments() {
+            var input, filter, library, pdfItems, title, i, txtValue;
+            input = document.getElementById("searchBar");
+            filter = input.value.toLowerCase();
+            library = document.querySelector(".library");
+            pdfItems = library.getElementsByClassName("pdf-item");
+
+            for (i = 0; i < pdfItems.length; i++) {
+                title = pdfItems[i].getElementsByTagName("h3")[0];
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    pdfItems[i].style.display = "";
+                } else {
+                    pdfItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SaltWise</h3>
+                <p>Empowering farmers with sustainable solutions for saline agriculture through knowledge sharing and community support.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Learn more</a></li>
+                    <li><a href="tools.html">Agroecological practices</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="diagnostic.html">Diagnostic</a></li>
+                    <li><a href="events.html">Events & Marketplace</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SaltWise. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

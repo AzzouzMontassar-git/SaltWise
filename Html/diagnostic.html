@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Soil Diagnostic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/diagnostic.css">
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+                <li><a href="practices.html">Agroecological practices</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="diagnostic.html" class="active">Diagnostic</a></li>  <!-- Added active class -->
+                <li><a href="events.html">Events & Marketplace</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Soil Diagnostic</h1>
+            <p>Get personalized soil recommendations based on your parameters, symptoms, and analysis</p>
+        </div>
+        <div class="hero-progress">
+            <div class="progress-step active" data-step="1">
+                <span>1</span>
+                <p>Basic Parameters</p>
+            </div>
+            <div class="progress-step" data-step="2">
+                <span>2</span>
+                <p>Visual Symptoms</p>
+            </div>
+            <div class="progress-step" data-step="3">
+                <span>3</span>
+                <p>Results & Options</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="diagnostic-container">
+        <form id="diagnosticForm">
+            <!-- Step 1: Basic Parameters -->
+            <div class="form-step active" id="step1">
+                <h2><i class="fas fa-flask"></i> Soil Parameters</h2>
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="climate">
+                            <i class="fas fa-cloud-sun"></i> Climate Zone
+                        </label>
+                        <select id="climate" name="climate" required>
+                            <option value="">Select climate</option>
+                            <option value="tropical">Tropical</option>
+                            <option value="arid">Arid/Desert</option>
+                            <option value="temperate">Temperate</option>
+                            <option value="continental">Continental</option>
+                            <option value="polar">Polar</option>
+                            <option value="mediterranean">Mediterranean</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topography">
+                            <i class="fas fa-mountain"></i> Topography
+                        </label>
+                        <select id="topography" name="topography" required>
+                            <option value="">Select topography</option>
+                            <option value="flat">Flat</option>
+                            <option value="rolling">Rolling hills</option>
+                            <option value="steep">Steep slopes</option>
+                            <option value="valley">Valley</option>
+                            <option value="plateau">Plateau</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">
+                            <i class="fas fa-map-marker-alt"></i> Location
+                        </label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soil_type">
+                            <i class="fas fa-mountain"></i> Soil Type
+                        </label>
+                        <select id="soil_type" name="soil_type">
+                            <option value="">Select soil type</option>
+                            <option value="clay">Clay</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="loamy">Loamy</option>
+                            <option value="silty">Silty</option>
+                            <option value="peaty">Peaty</option>
+                            <option value="chalky">Chalky</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="salinity">
+                            <i class="fas fa-water"></i> Salinity Index (dS/m)
+                            <span class="info-tooltip" title="Electrical conductivity measurement of soil salinity">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </label>
+                        <input type="number" id="salinity" name="salinity" step="0.1" min="0" required>
+                        <div class="range-labels">
+                            <span>Low (&lt;0.8)</span>
+                            <span>Moderate (0.8-1.5)</span>
+                            <span>High (&gt;1.5)</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="existing_species">
+                            <i class="fas fa-tree"></i> Existing Plant Species
+                        </label>
+                        <textarea id="existing_species" name="existing_species" rows="3" placeholder="List the main plant species currently growing in this soil..."></textarea>
+                    </div>
+
+                </div>  <!-- Fixed: Only one closing div for form-grid -->
+
+                <div class="form-actions">
+                    <button type="button" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 2: Visual Symptoms -->
+            <div class="form-step" id="step2">
+                <h2><i class="fas fa-eye"></i> Visual Symptoms & Uploads</h2>
+                
+                <div class="symptoms-section">
+                    <h3>Select observed symptoms:</h3>
+                    <div class="symptoms-grid">
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="yellowing">
+                            <div class="symptom-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Yellowing leaves</span>
+                            </div>
+                        </label>
+                        
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="stunting">
+                            <div class="symptom-card">
+                                <i class="fas fa-ruler-vertical"></i>
+                                <span>Stunted growth</span>
+                            </div>
+                        </label>
+                        
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="wilting">
+                            <div class="symptom-card">
+                                <i class="fas fa-tint-slash"></i>
+                                <span>Wilting plants</span>
+                            </div>
+                        </label>
+                        
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="crusting">
+                            <div class="symptom-card">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Surface crusting</span>
+                            </div>
+                        </label>
+                        
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="erosion">
+                            <div class="symptom-card">
+                                <i class="fas fa-water"></i>
+                                <span>Erosion signs</span>
+                            </div>
+                        </label>
+                        
+                        <label class="symptom-checkbox">
+                            <input type="checkbox" name="symptoms" value="discoloration">
+                            <div class="symptom-card">
+                                <i class="fas fa-palette"></i>
+                                <span>Soil discoloration</span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="symptoms_description">
+                            <i class="fas fa-comment-alt"></i> Additional symptom description
+                        </label>
+                        <textarea id="symptoms_description" name="symptoms_description" rows="3" placeholder="Describe any other symptoms you've observed..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="uploads-section">
+                    <h3>Upload visual evidence:</h3>
+                    <div class="upload-options">
+                        <div class="upload-card" id="photoUpload">
+                            <i class="fas fa-camera"></i>
+                            <span>Add Photos</span>
+                            <input type="file" id="soil_photos" name="soil_photos" accept="image/*" multiple style="display: none;">
+                            <div class="preview-container" id="photoPreview"></div>
+                        </div>
+                        
+                        <div class="upload-card" id="videoUpload">
+                            <i class="fas fa-video"></i>
+                            <span>Add Video</span>
+                            <input type="file" id="soil_video" name="soil_video" accept="video/*" style="display: none;">
+                            <div class="preview-container" id="videoPreview"></div>
+                        </div>
+                        
+                        <div class="upload-card" id="pdfUpload">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Upload Soil Analysis (PDF)</span>
+                            <input type="file" id="soil_analysis" name="soil_analysis" accept=".pdf" style="display: none;">
+                            <div id="pdfPreview"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Results & Options -->
+            <div class="form-step" id="step3">
+                <h2><i class="fas fa-clipboard-check"></i> Review & Submit</h2>
+                
+                <div class="summary-section">
+                    <h3>Your Input Summary</h3>
+                    <div id="inputSummary" class="summary-cards"></div>
+                </div>
+                
+                <div class="options-section">
+                    <h3>Choose your preferred results option:</h3>
+                    <div class="options-grid">
+                        <label class="option-radio">
+                            <input type="radio" name="result_option" value="automatic" checked>
+                            <div class="option-card">
+                                <i class="fas fa-robot"></i>
+                                <h4>Automatic Recommendations</h4>
+                                <p>Get immediate AI-powered soil recommendations based on your inputs</p>
+                            </div>
+                        </label>
+                        
+                        <label class="option-radio">
+                            <input type="radio" name="result_option" value="expert">
+                            <div class="option-card">
+                                <i class="fas fa-user-tie"></i>
+                                <h4>Expert Consultation</h4>
+                                <p>Have one of our soil experts analyze your data and contact you</p>
+                                <div class="expert-details" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="contact_method">Preferred contact method:</label>
+                                        <select id="contact_method" name="contact_method">
+                                            <option value="email">Email</option>
+                                            <option value="phone">Phone</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact_info">Contact information:</label>
+                                        <input type="text" id="contact_info" name="contact_info" placeholder="Enter your email or phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="btn-submit">Get Results <i class="fas fa-chart-line"></i></button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2><i class="fas fa-microscope"></i> Soil Diagnostic Results</h2>
+                <button id="newDiagnostic" class="btn-new"><i class="fas fa-redo"></i> New Diagnostic</button>
+            </div>
+            
+            <div class="results-tabs">
+                <button class="tab-btn active" data-tab="recommendations">Recommendations</button>
+                <button class="tab-btn" data-tab="analysis">Soil Analysis</button>
+                <button class="tab-btn" data-tab="resources">Resources</button>
+            </div>
+            
+            <div class="tab-content active" id="recommendations">
+                <div id="resultsContent"></div>
+            </div>
+            
+            <div class="tab-content" id="analysis">
+                <h3>Detailed Soil Analysis</h3>
+                <div id="analysisContent"></div>
+            </div>
+            
+            <div class="tab-content" id="resources">
+                <h3>Recommended Resources</h3>
+                <div class="resources-grid" id="resourcesContent"></div>
+            </div>
+            
+            <div class="expert-cta" id="expertCTA" style="display: none;">
+                <h3>Need more help?</h3>
+                <p>Our soil experts are available to provide personalized advice.</p>
+                <button id="contactExpert" class="btn-expert"><i class="fas fa-user-tie"></i> Contact an Expert</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SaltWise</h3>
+                <p>Empowering farmers with sustainable solutions for saline agriculture through knowledge sharing and community support.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Learn more</a></li>
+                    <li><a href="tools.html">Agroecological practices</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="diagnostic.html">Diagnostic</a></li>
+                    <li><a href="events.html">Events & Marketplace</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SaltWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/diagnostic.js"></script>
+</body>
+</html>

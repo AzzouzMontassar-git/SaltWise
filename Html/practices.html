@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroecological Practices | SaltWise</title>
+    <link rel="stylesheet" href="../css/practices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+<body>
+
+    <header class="main-nav">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+                <li class="active"><a href="practices.html">Agroecological practices</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="diagnostic.html">Diagnostic</a></li>
+                <li><a href="events.html">Events & Marketplace</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content (changed from header to div) -->
+    <div class="container">
+        <div class="page-header">  <!-- Changed from header to div -->
+            <h1><i class="fas fa-leaf"></i> Agroecological Solutions</h1>
+            <div class="region-selector">
+                <label for="regions"><i class="fas fa-globe-africa"></i> Select Region:</label>
+                <select id="regions">
+                    <option value="all">All Regions</option>
+                    <option value="mena">Middle East & North Africa</option>
+                    <option value="southasia">South Asia</option>
+                    <option value="latinamerica">Latin America</option>
+                    <option value="subsahara">Sub-Saharan Africa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="practices">
+                <i class="fas fa-tractor"></i> Agroecological Practices
+            </button>
+            <button class="tab-btn" data-category="crops">
+                <i class="fas fa-seedling"></i> Salt-Tolerant Crops
+            </button>
+        </div>
+
+        <!-- Practices Section -->
+        <section id="practices-section" class="active-section">
+            <h2><i class="fas fa-hand-holding-water"></i> Soil & Water Management</h2>
+            <div class="cards-container">
+                <!-- Practice 1 -->
+                <div class="card" data-regions="mena southasia">
+                    <div class="card-header">
+                        <img src="../images/gypsum.jpg" alt="Gypsum Application">
+                        <h3>Gypsum Application <span class="region-tag mena">MENA</span><span class="region-tag southasia">South Asia</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Apply agricultural gypsum (2-4 tons/acre) to displace sodium.</p>
+                        <p><strong>Regional Tip (Egypt):</strong> Apply before Nile flooding season (August).</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Agricultural gypsum, spreader</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>3-4 weeks before planting</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 2 -->
+                <div class="card" data-regions="latinamerica subsahara">
+                    <div class="card-header">
+                        <img src="../images/mulching.jpg" alt="Sand Mulching">
+                        <h3>Sand Mulching <span class="region-tag latinamerica">Latin America</span><span class="region-tag subsahara">Sub-Saharan</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> 5cm sand layer reduces evaporation and salt accumulation.</p>
+                        <p><strong>Regional Tip (Chile):</strong> Combine with fog nets in Atacama region.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Coarse sand, digging tools</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Apply during dry season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 3 -->
+                <div class="card" data-regions="southasia mena">
+                    <div class="card-header">
+                        <img src="../images/leaching.jpg" alt="Salt-Water Leaching">
+                        <h3>Salt-Water Leaching <span class="region-tag southasia">South Asia</span><span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Flood fields with 6-12" freshwater to flush salts.</p>
+                        <p><strong>Regional Tip (Bangladesh):</strong> Time with monsoon rains.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Freshwater source, drainage</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Post-harvest season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 4 -->
+                <div class="card" data-regions="southasia subsahara">
+                    <div class="card-header">
+                        <img src="../images/rice-husk.jpg" alt="Rice Husk Mulching">
+                        <h3>Rice Husk Mulching <span class="region-tag southasia">South Asia</span><span class="region-tag subsahara">Sub-Saharan</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> 3-inch layer reduces evaporation, adds silica.</p>
+                        <p><strong>Regional Tip (Nigeria):</strong> Combine with poultry manure.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Rice husks, compost</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>At planting time</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 5 -->
+                <div class="card" data-regions="latinamerica mena">
+                    <div class="card-header">
+                        <img src="../images/halophyte.jpg" alt="Halophyte Rotation">
+                        <h3>Halophyte Rotation <span class="region-tag latinamerica">Latin America</span><span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Grow salt-accumulating plants for 1 season.</p>
+                        <p><strong>Regional Tip (Mexico):</strong> Use Salicornia as cash crop.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Saltbush seeds</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>During fallow periods</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 6 -->
+                <div class="card" data-regions="southasia subsahara">
+                    <div class="card-header">
+                        <img src="../images/raised-beds.jpg" alt="Raised Bed Planting">
+                        <h3>Raised Bed Planting <span class="region-tag southasia">South Asia</span><span class="region-tag subsahara">Sub-Saharan</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> 12" high beds prevent capillary salt rise.</p>
+                        <p><strong>Regional Tip (Senegal):</strong> Space beds 50cm apart.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Hoe, measuring stick</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Before rainy season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 7 -->
+                <div class="card" data-regions="southasia mena">
+                    <div class="card-header">
+                        <img src="../images/sulfur.jpg" alt="Sulfur Amendment">
+                        <h3>Sulfur Amendment <span class="region-tag southasia">South Asia</span><span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Elemental sulfur lowers pH in alkaline soils.</p>
+                        <p><strong>Regional Tip (India):</strong> Use 300kg/ha in Rajasthan.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Sulfur powder, spreader</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>3 months before planting</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 8 -->
+                <div class="card" data-regions="subsahara latinamerica">
+                    <div class="card-header">
+                        <img src="../images/windbreak.jpg" alt="Agroforestry Windbreaks">
+                        <h3>Agroforestry Windbreaks <span class="region-tag subsahara">Sub-Saharan</span><span class="region-tag latinamerica">Latin America</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Salt-tolerant trees reduce wind erosion.</p>
+                        <p><strong>Regional Tip (Brazil):</span> Use Atriplex nummularia.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Tree saplings, fencing</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Plant at start of rains</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Practice 9 -->
+                <div class="card" data-regions="all">
+                    <div class="card-header">
+                        <img src="../images/compost-tea.jpg" alt="Compost Tea Irrigation">
+                        <h3>Compost Tea Irrigation <span class="region-tag mena">All Regions</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Aerated compost extracts boost microbes.</p>
+                        <p><strong>Regional Tip:</strong> Use local manure sources.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Compost, brewing system</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Every 2 weeks in season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Crops Section (Hidden by default) -->
+        <section id="crops-section">
+            <h2><i class="fas fa-apple-alt"></i> Salt-Tolerant Crops</h2>
+            <div class="cards-container">
+                <!-- Crop 1 -->
+                <div class="card" data-regions="mena southasia">
+                    <div class="card-header">
+                        <img src="../images/barley.jpg" alt="Barley">
+                        <h3>Barley <span class="region-tag mena">MENA</span><span class="region-tag southasia">South Asia</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 8-10 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'ACSAD 176' (Syria), 'RD 2552' (India)</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Nov-Dec (MENA)</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: 500-600mm/season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 2 -->
+                <div class="card" data-regions="latinamerica southasia">
+                    <div class="card-header">
+                        <img src="../images/quinoa.jpg" alt="Quinoa">
+                        <h3>Quinoa <span class="region-tag latinamerica">Latin America</span><span class="region-tag southasia">South Asia</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 10-12 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Titicaca', 'Real'</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Spring/Autumn</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Low-moderate</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 3 -->
+                <div class="card" data-regions="mena">
+                    <div class="card-header">
+                        <img src="../images/date-palm.jpg" alt="Date Palm">
+                        <h3>Date Palm <span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 12-15 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Medjool', 'Deglet Noor'</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Year-round</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Brackish acceptable</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 4 -->
+                <div class="card" data-regions="all">
+                    <div class="card-header">
+                        <img src="../images/saltwort.jpg" alt="Saltwort">
+                        <h3>Saltwort <span class="region-tag mena">All Regions</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 20+ dS/m</p>
+                        <p><strong>Uses:</strong> Edible, biofuel</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Warm seasons</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Seawater possible</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 5 -->
+                <div class="card" data-regions="subsahara southasia">
+                    <div class="card-header">
+                        <img src="../images/sorghum.jpg" alt="Sorghum">
+                        <h3>Sorghum <span class="region-tag subsahara">Sub-Saharan</span><span class="region-tag southasia">South Asia</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 6-8 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Parbhani Moti' (India)</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: With rains</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Drought-tolerant</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 6 -->
+                <div class="card" data-regions="latinamerica mena">
+                    <div class="card-header">
+                        <img src="../images/sugar-beet.jpg" alt="Sugar Beet">
+                        <h3>Sugar Beet <span class="region-tag latinamerica">Latin America</span><span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 7-9 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Hilleshog' series</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Cool seasons</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Moderate</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 7 -->
+                <div class="card" data-regions="subsahara latinamerica">
+                    <div class="card-header">
+                        <img src="../images/sesuvium.jpg" alt="Sesuvium">
+                        <h3>Sesuvium <span class="region-tag subsahara">Sub-Saharan</span><span class="region-tag latinamerica">Latin America</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 15-18 dS/m</p>
+                        <p><strong>Uses:</strong> Ground cover, edible</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Year-round</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Minimal</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 8 -->
+                <div class="card" data-regions="subsahara southasia">
+                    <div class="card-header">
+                        <img src="../images/millet.jpg" alt="Pearl Millet">
+                        <h3>Pearl Millet <span class="region-tag subsahara">Sub-Saharan</span><span class="region-tag southasia">South Asia</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 8-10 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'ICMH 356'</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Early rains</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: 300-400mm</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 9 -->
+                <div class="card" data-regions="mena latinamerica">
+                    <div class="card-header">
+                        <img src="../images/atriplex.jpg" alt="Atriplex">
+                        <h3>Atriplex <span class="region-tag mena">MENA</span><span class="region-tag latinamerica">Latin America</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 12-15 dS/m</p>
+                        <p><strong>Uses:</strong> Fodder, soil rehab</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Any season</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Very low</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- Crop 10 -->
+                <div class="card" data-regions="southasia subsahara">
+                    <div class="card-header">
+                        <img src="../images/coconut.jpg" alt="Coconut">
+                        <h3>Coconut <span class="region-tag southasia">South Asia</span><span class="region-tag subsahara">Sub-Saharan</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 8-10 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'West Coast Tall'</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Year-round</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Tolerates spray</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/practices.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SaltWise</h3>
+                <p>Empowering farmers with sustainable solutions for saline agriculture through knowledge sharing and community support.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Learn more</a></li>
+                    <li><a href="tools.html">Agroecological practices</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="diagnostic.html">Diagnostic</a></li>
+                    <li><a href="events.html">Events & Marketplace</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SaltWise. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Marketplace - SaltWise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+                <li><a href="practices.html">Agroecological practices</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="diagnostic.html">Diagnostic</a></li>
+                <li><a href="events.html" class="active">Events & Marketplace</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Connect & Trade with SaltWise Community</h1>
+                <p>Discover upcoming events, workshops, and marketplace offerings tailored for saline agriculture enthusiasts.</p>
+                <a href="#" class="button">Join Our Next Event</a>
+            </div>
+        </section>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('events')">Events & Workshops</button>
+            <button class="tab-button" onclick="openTab('marketplace')">Marketplace</button>
+        </div>
+
+        <div id="events" class="tab-content active">
+            <h2 class="section-title">Upcoming Events & Workshops</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/seminar2.jpg" alt="Workshop">
+                    </div>
+                    <div class="card-content">
+                        <h3>Salinity-Resilient Crops Workshop</h3>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar-alt"></i> June 24, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Online</span>
+                        </div>
+                        <p>Join our expert agronomists as they explore the best crop varieties suitable for saline soils. Learn practical techniques for soil management and crop selection.</p>
+                        <div class="price">Free</div>
+                        <a href="#" class="button">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/networking.jpg" alt="Community Meetup">
+                    </div>
+                    <div class="card-content">
+                        <h3>Farmer Stories Community Meetup</h3>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar-alt"></i> July 5, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Local Cooperative Hub</span>
+                        </div>
+                        <p>Connect with fellow farmers to share sustainable practices, success stories, and challenges in dealing with soil salinity. Networking and knowledge exchange.</p>
+                        <div class="price">Free</div>
+                        <a href="#" class="button">Join Meetup</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/training.jpg" alt="Training">
+                    </div>
+                    <div class="card-content">
+                        <h3>Advanced Soil Salinity Management</h3>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar-alt"></i> August 12, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Regional Agricultural Center</span>
+                        </div>
+                        <p>Two-day intensive training on advanced techniques for managing saline soils, including irrigation methods and organic amendments.</p>
+                        <div class="price">50TND</div>
+                        <a href="#" class="button">Book Your Spot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="marketplace" class="tab-content">
+            <h2 class="section-title">Marketplace</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/tomato.jpg" alt="Tomato Seeds">
+                    </div>
+                    <div class="card-content">
+                        <h3>Salt-Tolerant Tomato Seeds</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user-tie"></i> GreenGrow Co-op</span>
+                            <span><i class="fas fa-star"></i> 4.8 (24 reviews)</span>
+                        </div>
+                        <p>Specially bred tomato variety that thrives in saline conditions. High yield potential with excellent fruit quality. Packet contains 50 seeds.</p>
+                        <div class="price">5TND/packet</div>
+                        <a href="#" class="button">Contact Seller</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/kit2.jpg" alt="Soil Testing Kit">
+                    </div>
+                    <div class="card-content">
+                        <h3>Professional Soil Testing Kit</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user-tie"></i> AgroTech Solutions</span>
+                            <span><i class="fas fa-star"></i> 4.6 (42 reviews)</span>
+                        </div>
+                        <p>Complete kit to analyze pH, salinity, and essential nutrients in your soil. Includes detailed instructions and 20 tests for each parameter.</p>
+                        <div class="price">20TND/kit</div>
+                        <a href="#" class="button">Contact Seller</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="../images/sys.jpg" alt="Irrigation System">
+                    </div>
+                    <div class="card-content">
+                        <h3>Drip Irrigation System</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user-tie"></i> WaterWise Irrigation</span>
+                            <span><i class="fas fa-star"></i> 4.9 (36 reviews)</span>
+                        </div>
+                        <p>Efficient irrigation system designed for saline conditions. Reduces water usage while preventing salt accumulation around plant roots.</p>
+                        <div class="price">150TND (starter kit)</div>
+                        <a href="#" class="button">Contact Seller</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h2>Have Something to Share?</h2>
+            <p>Whether you're hosting an event or have products to offer, our community is eager to connect with you.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem;">
+                <a href="#" class="button">Submit Your Event</a>
+                <a href="#" class="button button-outline">Add Marketplace Listing</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SaltWise</h3>
+                <p>Empowering farmers with sustainable solutions for saline agriculture through knowledge sharing and community support.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Learn more</a></li>
+                    <li><a href="tools.html">Agroecological practices</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="diagnostic.html">Diagnostic</a></li>
+                    <li><a href="events.html">Events & Marketplace</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SaltWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/events.js"></script>
+</body>
+</html>
