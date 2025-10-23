@@ -13,8 +13,8 @@
     <header class="main-nav">
         <nav>
             <ul>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="learn.html">Learn more</a></li>
                 <li class="active"><a href="practices.html">Agroecological practices</a></li>
                 <li><a href="library.html">Library</a></li>
                 <li><a href="forum.html">Forum</a></li>
@@ -37,6 +37,7 @@
                     <option value="southasia">South Asia</option>
                     <option value="latinamerica">Latin America</option>
                     <option value="subsahara">Sub-Saharan Africa</option>
+                    <option value="europe">Europe</option>
                 </select>
             </div>
         </div>
@@ -223,7 +224,7 @@
                     </div>
                     <div class="card-desc">
                         <p><strong>How it works:</strong> Salt-tolerant trees reduce wind erosion.</p>
-                        <p><strong>Regional Tip (Brazil):</span> Use Atriplex nummularia.</p>
+                        <p><strong>Regional Tip (Brazil):</strong> Use Atriplex nummularia.</p>
                         <div class="practice-details">
                             <div class="detail">
                                 <i class="fas fa-tools"></i>
@@ -242,7 +243,7 @@
                 <div class="card" data-regions="all">
                     <div class="card-header">
                         <img src="../images/compost-tea.jpg" alt="Compost Tea Irrigation">
-                        <h3>Compost Tea Irrigation <span class="region-tag mena">All Regions</span></h3>
+                        <h3>Compost Tea Irrigation <span class="region-tag all">All Regions</span></h3>
                     </div>
                     <div class="card-desc">
                         <p><strong>How it works:</strong> Aerated compost extracts boost microbes.</p>
@@ -255,6 +256,75 @@
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
                                 <span>Every 2 weeks in season</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- New Practice 10: Gypsum Application for Europe -->
+                <div class="card" data-regions="europe">
+                    <div class="card-header">
+                        <img src="https://pub.mdpi-res.com/agriculture/agriculture-15-00658/article_deploy/html/images/agriculture-15-00658-g001.png?1742896708" alt="Gypsum Application in Europe">
+                        <h3>Gypsum Application <span class="region-tag europe">Europe</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Apply gypsum (2-5 tons/ha) combined with tillage to improve soil structure and reduce sodium levels in saline fields.</p>
+                        <p><strong>Regional Tip (Spain):</strong> Integrate with deep plowing in Mediterranean coastal areas to enhance drainage.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Agricultural gypsum, tillage equipment</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Autumn, before winter rains</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- New Practice 11: Raised Bed Farming for Europe -->
+                <div class="card" data-regions="europe">
+                    <div class="card-header">
+                        <img src="https://www.foodinspiration.com/img/cache/Zilte-proefboerderij-Texel.jpg-1600x900.jpg" alt="Raised Bed Farming in Europe">
+                        <h3>Raised Bed Farming <span class="region-tag europe">Europe</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Construct 20-30 cm raised beds to minimize salt accumulation and improve root aeration.</p>
+                        <p><strong>Regional Tip (Netherlands):</strong> Use in coastal polders with subsurface drainage to manage rising sea levels.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Soil, framing materials, drainage pipes</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Spring preparation</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- New Practice 12: Improved Drainage and Leaching for Europe -->
+                <div class="card" data-regions="europe mena">
+                    <div class="card-header">
+                        <img src="../images/leaching.jpg" alt="Improved Drainage and Leaching">
+                        <h3>Improved Drainage and Leaching <span class="region-tag europe">Europe</span><span class="region-tag mena">MENA</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>How it works:</strong> Install subsurface drains and apply controlled leaching with low-salt water to flush excess salts.</p>
+                        <p><strong>Regional Tip (Italy):</strong> Combine with cover crops in Po Valley to prevent re-salinization.</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-tools"></i>
+                                <span>Drainage tiles, low-salt irrigation</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>Winter leaching cycles</span>
                             </div>
                         </div>
                         <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
@@ -341,7 +411,7 @@
                 <div class="card" data-regions="all">
                     <div class="card-header">
                         <img src="../images/saltwort.jpg" alt="Saltwort">
-                        <h3>Saltwort <span class="region-tag mena">All Regions</span></h3>
+                        <h3>Saltwort <span class="region-tag all">All Regions</span></h3>
                     </div>
                     <div class="card-desc">
                         <p><strong>Salinity Tolerance:</strong> 20+ dS/m</p>
@@ -497,6 +567,76 @@
                         <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
                     </div>
                 </div>
+
+                <!-- New Crop 11: Salt-Tolerant Barley for Europe -->
+                <div class="card" data-regions="europe">
+                    <div class="card-header">
+                        <img src="https://www.mdpi.com/agriculture/agriculture-14-01674/article_deploy/html/images/agriculture-14-01674-g004.png" alt="Salt-Tolerant Barley in Europe">
+                        <h3>Salt-Tolerant Barley <span class="region-tag europe">Europe</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 8-12 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Martin' or 'Tidal' (bred for saline conditions in Spain)</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Autumn sowing</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Moderate, with leaching</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- New Crop 12: Quinoa for Europe -->
+                <div class="card" data-regions="europe latinamerica">
+                    <div class="card-header">
+                        <img src="https://cordis.europa.eu/docs/results/images/2020-04/415814.jpg" alt="Quinoa in European Saline Soils">
+                        <h3>Quinoa <span class="region-tag europe">Europe</span><span class="region-tag latinamerica">Latin America</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 10-15 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Brighton' or 'Cherry Vanilla' (adapted for EU climates)</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Spring in Mediterranean</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Low, drought-resistant</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
+                <!-- New Crop 13: Asparagus for Europe -->
+                <div class="card" data-regions="europe">
+                    <div class="card-header">
+                        <img src="https://www.ars.usda.gov/ARSUserFiles/20361500/images/saline_asparagus.jpg" alt="Asparagus in Saline Soils">
+                        <h3>Asparagus <span class="region-tag europe">Europe</span></h3>
+                    </div>
+                    <div class="card-desc">
+                        <p><strong>Salinity Tolerance:</strong> 5-10 dS/m</p>
+                        <p><strong>Best Varieties:</strong> 'Jersey Giant' or 'UC 157' (high tolerance hybrids)</p>
+                        <div class="practice-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Plant: Spring in well-drained soils</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-tint"></i>
+                                <span>Water: Moderate, sandy soils preferred</span>
+                            </div>
+                        </div>
+                        <button class="save-btn"><i class="far fa-bookmark"></i> Save</button>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
@@ -519,7 +659,7 @@
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="learn.html">Learn more</a></li>
-                    <li><a href="tools.html">Agroecological practices</a></li>
+                    <li><a href="practices.html">Agroecological practices</a></li>
                     <li><a href="library.html">Library</a></li>
                     <li><a href="forum.html">Forum</a></li>
                 </ul>

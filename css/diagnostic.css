@@ -8,67 +8,107 @@
 }
 
 :root {
-    --primary: #4CAF50;
-    --primary-dark: #388E3C;
-    --primary-light: #C8E6C9;
-    --secondary: #2196F3;
-    --accent: #FFC107;
-    --text: #333;
-    --text-light: #666;
-    --bg: #f8f9fa;
-    --card-bg: #fff;
-    --border: #e0e0e0;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --transition: all 0.3s ease;
-    /* Fixed: Added for footer consistency */
     --soil-brown: #5C4B36;
-    --dark-color: #343a40;
-    --primary-color: #4CAF50;
+    --plant-green: #6B8E23;
+    --ocean-blue: #3A7CA5;
+    --gold-accent: #D4AF37;
+    --white-text: #F8F8F8;
+    --primary-color: #008000;
+    --transition: all 0.3s ease;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --border: #e0e0e0;
+    --primary-light: #e8f5e8;
+    --primary-dark: #006400;
 }
 
 /* Body and General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #f5f5f0;
+    color: #333;
     padding: 0;
 }
 
-/* Hero Section */
+/* Header/Nav Styles (Matched to theme) */
+header {
+    background: var(--primary-color);
+    color: var(--white-text);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1.5rem;
+}
+
+header nav ul li a {
+    color: var(--white-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--gold-accent);
+}
+
+/* Hero Section (Matched to theme) */
 .hero {
+    background: url('../images/soil.jpg') no-repeat center center/cover;
+    color: var(--white-text);
     text-align: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
+    padding: 5rem 1rem;
     position: relative;
     overflow: hidden;
 }
 
 .hero::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    opacity: 0.9;
+    margin: 0 auto 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-progress {
@@ -96,36 +136,37 @@ body {
 .progress-step span {
     width: 40px;
     height: 40px;
-    background: white;
-    color: var(--primary);
+    background: var(--white-text);
+    color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    border: 3px solid white;
-    box-shadow: 0 0 0 2px var(--primary);
+    border: 3px solid var(--white-text);
+    box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 .progress-step p {
     font-size: 0.9rem;
     font-weight: 500;
+    color: var(--white-text);
 }
 
 .progress-step.active span {
-    background: var(--primary);
-    color: white;
+    background: var(--primary-color);
+    color: var(--white-text);
 }
 
 .progress-step::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 20px;
     left: calc(100% + 10px);
     width: 3rem;
     height: 2px;
-    background: white;
+    background: var(--white-text);
     opacity: 0.3;
 }
 
@@ -144,10 +185,11 @@ body {
 .form-step {
     display: none;
     background: var(--card-bg);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: 2rem;
     margin-bottom: 2rem;
+    transition: var(--transition);
 }
 
 .form-step.active {
@@ -161,7 +203,7 @@ body {
 }
 
 .form-step h2 {
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
     display: flex;
@@ -171,6 +213,7 @@ body {
 
 .form-step h2 i {
     font-size: 1.4rem;
+    color: var(--gold-accent);
 }
 
 .form-grid {
@@ -190,14 +233,14 @@ body {
     margin-bottom: 0.5rem;
     display: block;
     font-weight: 500;
-    color: var(--text);
-    display: flex;  /* Fixed: Duplicate display, but okay */
+    color: #333;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 .form-group label i {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .info-tooltip {
@@ -221,9 +264,9 @@ select {
     padding: 0.8rem 1rem;
     font-size: 1rem;
     border: 2px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     transition: var(--transition);
-    background: var(--card-bg);
+    background: var(--bg-light);
     font-family: inherit;
 }
 
@@ -231,9 +274,10 @@ input[type="number"]:focus,
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-    border-color: var(--primary);
+    border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.2);
+    background: var(--card-bg);
 }
 
 textarea {
@@ -258,7 +302,7 @@ button,
 .btn-expert {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
@@ -270,33 +314,35 @@ button,
 
 .btn-next,
 .btn-submit {
-    background-color: var(--primary);
-    color: white;
+    background: var(--primary-color);
+    color: var(--white-text);
 }
 
 .btn-next:hover,
 .btn-submit:hover {
-    background-color: var(--primary-dark);
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .btn-prev {
-    background-color: #f5f5f5;
-    color: var(--text);
+    background: var(--bg-light);
+    color: #333;
+    border: 2px solid var(--border);
 }
 
 .btn-prev:hover {
-    background-color: #e0e0e0;
+    background: #e8e8e8;
+    border-color: var(--primary-color);
 }
 
 .btn-new {
-    background-color: var(--secondary);
-    color: white;
+    background: var(--ocean-blue);
+    color: var(--white-text);
 }
 
 .btn-expert {
-    background-color: var(--accent);
+    background: var(--gold-accent);
     color: #333;
 }
 
@@ -304,12 +350,13 @@ button,
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 1rem;
 }
 
 /* Symptoms Section */
 .symptoms-section h3 {
     margin-bottom: 1rem;
-    color: var(--text);
+    color: #333;
     font-size: 1.2rem;
 }
 
@@ -332,7 +379,7 @@ button,
     padding: 1rem;
     background: var(--card-bg);
     border: 2px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
@@ -345,20 +392,20 @@ button,
 
 .symptom-card i {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .symptom-checkbox input:checked + .symptom-card {
-    border-color: var(--primary);
+    border-color: var(--primary-color);
     background-color: var(--primary-light);
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.2);
 }
 
 /* Uploads Section */
 .uploads-section h3 {
     margin: 1.5rem 0 1rem;
-    color: var(--text);
+    color: #333;
     font-size: 1.2rem;
 }
 
@@ -372,7 +419,7 @@ button,
     padding: 1.5rem 1rem;
     background: var(--card-bg);
     border: 2px dashed var(--border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
@@ -382,13 +429,13 @@ button,
 }
 
 .upload-card:hover {
-    border-color: var(--primary);
-    background: rgba(76, 175, 80, 0.05);
+    border-color: var(--primary-color);
+    background: rgba(0, 128, 0, 0.05);
 }
 
 .upload-card i {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 0.8rem;
 }
 
@@ -414,13 +461,13 @@ button,
 #pdfPreview {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 /* Options Section */
 .options-section h3 {
     margin-bottom: 1rem;
-    color: var(--text);
+    color: #333;
     font-size: 1.2rem;
 }
 
@@ -442,7 +489,7 @@ button,
     padding: 1.5rem;
     background: var(--card-bg);
     border: 2px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition);
     height: 100%;
@@ -450,13 +497,13 @@ button,
 
 .option-card i {
     font-size: 1.8rem;
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .option-card h4 {
     margin-bottom: 0.5rem;
-    color: var(--text);
+    color: #333;
 }
 
 .option-card p {
@@ -466,9 +513,9 @@ button,
 }
 
 .option-radio input:checked + .option-card {
-    border-color: var(--primary);
+    border-color: var(--primary-color);
     background-color: var(--primary-light);
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.2);
 }
 
 .expert-details {
@@ -480,7 +527,7 @@ button,
 /* Summary Section */
 .summary-section h3 {
     margin-bottom: 1rem;
-    color: var(--text);
+    color: #333;
     font-size: 1.2rem;
 }
 
@@ -494,7 +541,7 @@ button,
 .summary-card {
     padding: 1rem;
     background: var(--primary-light);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .summary-card h4 {
@@ -511,11 +558,16 @@ button,
 /* Results Section */
 .results-section {
     background: var(--card-bg);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: 2rem;
     margin-bottom: 2rem;
     animation: fadeIn 0.5s ease;
+    transition: var(--transition);
+}
+
+.results-section:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .results-header {
@@ -526,7 +578,7 @@ button,
 }
 
 .results-header h2 {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 1.8rem;
     display: flex;
     align-items: center;
@@ -535,6 +587,7 @@ button,
 
 .results-header h2 i {
     font-size: 1.4rem;
+    color: var(--gold-accent);
 }
 
 .results-tabs {
@@ -555,17 +608,17 @@ button,
 }
 
 .tab-btn.active {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .tab-btn.active::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -1px;
     left: 0;
     width: 100%;
     height: 3px;
-    background: var(--primary);
+    background: var(--primary-color);
 }
 
 .tab-content {
@@ -582,7 +635,7 @@ button,
 
 #resultsContent h3 {
     margin: 1.5rem 0 1rem;
-    color: var(--primary-dark);
+    color: var(--primary-color);
 }
 
 #resultsContent ul {
@@ -603,7 +656,7 @@ button,
 .resource-card {
     padding: 1.5rem;
     background: var(--primary-light);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
@@ -624,24 +677,30 @@ button,
 }
 
 .resource-card a {
-    color: var(--secondary);
+    color: var(--ocean-blue);
     text-decoration: none;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.resource-card a:hover {
+    color: var(--primary-color);
 }
 
 .expert-cta {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: rgba(33, 150, 243, 0.1);
-    border-radius: 8px;
+    background: rgba(58, 124, 165, 0.1);
+    border-radius: var(--border-radius);
     text-align: center;
+    border-left: 4px solid var(--ocean-blue);
 }
 
 .expert-cta h3 {
-    color: var(--secondary);
+    color: var(--ocean-blue);
     margin-bottom: 0.5rem;
 }
 
@@ -650,12 +709,13 @@ button,
     color: var(--text-light);
 }
 
-/* Footer - Fixed: Uses defined vars */
+/* Footer (Matched to theme) */
 footer {
     background-color: var(--soil-brown);
     color: white;
     padding: 3rem 2rem;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .footer-content {
@@ -675,6 +735,7 @@ footer {
 
 .footer-column ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-column ul li {
@@ -695,6 +756,7 @@ footer {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
 .social-links a {
@@ -746,6 +808,20 @@ footer {
     .btn-submit {
         width: 100%;
     }
+    
+    .form-grid,
+    .options-grid,
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .symptoms-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .upload-options {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -777,6 +853,10 @@ footer {
     }
     
     .form-step {
+        padding: 1.5rem 1rem;
+    }
+    
+    .results-section {
         padding: 1.5rem 1rem;
     }
 }

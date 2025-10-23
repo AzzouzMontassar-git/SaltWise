@@ -1,0 +1,214 @@
+/* about.css - Styles specific to about page, extending Home.css theme */
+
+/* Earth & Growth Theme Variables (inherited from Home.css, but repeated for completeness if needed) */
+:root {
+    --soil-brown: #5C4B36;
+    --plant-green: #6B8E23;
+    --ocean-blue: #3A7CA5;
+    --gold-accent: #D4AF37;
+    --white-text: #F8F8F8;
+    --primary-color: #008000;
+    --transition: all 0.3s ease;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* About Main */
+.about-main {
+    background: linear-gradient(to bottom, var(--bg-light), #f5f5f0);
+}
+
+/* About Hero - Matched to home .hero design */
+.about-hero {
+    background: url('../images/soil.jpg') no-repeat center center/cover;
+    color: var(--white-text);
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about-hero h1,
+.about-hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 0;
+    background: white; /* Matches learn-section style */
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.about-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-color);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.about-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+}
+
+.about-cta {
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--ocean-blue);
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background: rgba(58, 124, 165, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    border-left: 4px solid var(--ocean-blue);
+}
+
+.sustain-links {
+    margin-top: 3rem;
+    text-align: center;
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.sustain-links h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.sustain-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sustain-links li {
+    margin-bottom: 0.5rem;
+}
+
+.sustain-links a {
+    color: var(--ocean-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 4px;
+    background: rgba(58, 124, 165, 0.1);
+}
+
+.sustain-links a:hover {
+    color: var(--primary-color);
+    background: rgba(0, 128, 0, 0.1);
+    text-decoration: none;
+}
+
+/* Responsive Adjustments (extend Home.css) */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .about-hero p {
+        font-size: 1rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-card {
+        padding: 1.5rem;
+    }
+    
+    .about-section {
+        padding: 2rem 0;
+    }
+    
+    header nav ul li {
+        margin: 0 0.8rem;
+        font-size: 1rem;
+    }
+}

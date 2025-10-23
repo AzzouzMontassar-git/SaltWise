@@ -12,9 +12,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="Html/index.html">Home</a></li>
-                <li><a href="Html/learn.html">Learn more</a></li>
-                <li class="active"><a href="Html/practices.html">Agroecological practices</a></li>
+                <li><a href="Html/about.html" class="active">About</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="Html/practices.html">Agroecological Practices</a></li>
                 <li><a href="Html/library.html">Library</a></li>
                 <li><a href="Html/forum.html">Forum</a></li>
                 <li><a href="Html/diagnostic.html">Diagnostic</a></li>
@@ -27,21 +27,102 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
             <h1>Welcome to SaltWise</h1>
             <p>Your digital hub for sustainable saline soil management.</p>
+        </section>
+
+        <!-- Learn More Section (Integrated from learn.html, tweaked for brevity and flow) -->
+        <section id="learn" class="learn-section">
+            <div class="container">
+                <div class="hero-banner">
+                    <h2>Understanding Salt-Affected Soils</h2>
+                    <p>Comprehensive knowledge for sustainable land management</p>
+                </div>
+
+                <div class="content-section">
+                    <article class="info-card">
+                        <h3>Origin, Classification, and Distribution</h3>
+                        <p>Salt-affected soils span all continents and climates, but are more prevalent in arid and semi-arid regions than humid ones. Their diverse characteristics demand customized reclamation strategies for sustained productivity.</p>
+                        
+                        <div class="card-grid">
+                            <div class="card-item">
+                                <h4>Origin of Salts</h4>
+                                <p>Excessive salts in the surface and root zone characterize saline soils, primarily derived from primary minerals in the earth's crust exposed on the surface.</p>
+                            </div>
+                            
+                            <div class="card-item">
+                                <h4>Classification</h4>
+                                <div class="classification-types">
+                                    <div class="type-item">
+                                        <strong>Saline Soils</strong>
+                                        <p>High soluble salts (EC > 4 dS/m), pH < 8.5</p>
+                                    </div>
+                                    <div class="type-item">
+                                        <strong>Sodic Soils</strong>
+                                        <p>High sodium (ESP > 15%), pH > 8.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="image-container">
+                            <img src="images/soil2.jpg" alt="Salt-Affected Soil" class="featured-image">
+                            <p class="image-caption">Visual representation of salt-affected soil</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Causes of Soil Salinity</h3>
+                        <div class="cause-list">
+                            <div class="cause-item">
+                                <i class="fas fa-tint"></i>
+                                <h4>Natural Causes</h4>
+                                <ul>
+                                    <li>Mineral weathering</li>
+                                    <li>Sea water intrusion</li>
+                                    <li>Atmospheric deposition</li>
+                                </ul>
+                            </div>
+                            <div class="cause-item">
+                                <i class="fas fa-tractor"></i>
+                                <h4>Human Activities</h4>
+                                <ul>
+                                    <li>Improper irrigation</li>
+                                    <li>Deforestation</li>
+                                    <li>Overuse of fertilizers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Effects of Soil Salinity</h3>
+                        <div class="effects-container">
+                            <div class="effect-item">
+                                <h4>On Plants</h4>
+                                <ul>
+                                    <li>Osmotic stress</li>
+                                    <li>Nutrient imbalance</li>
+                                    <li>Reduced growth</li>
+                                </ul>
+                            </div>
+                            <div class="effect-item">
+                                <h4>On Soil</h4>
+                                <ul>
+                                    <li>Poor structure</li>
+                                    <li>Reduced permeability</li>
+                                    <li>Decreased fertility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
         
         <!-- Photo Button Navigation Grid -->
         <div class="button-grid">
-            <a href="Html/learn.html" class="photo-button">
-                <img src="images/learn.jpg" alt="Learn About Salinity">
-                <div class="btn-text">
-                    <h2>Learn More</h2>
-                    <p>Understand soil salinity</p>
-                </div>
-            </a>
-
             <a href="Html/practices.html" class="photo-button">
                 <img src="images/practices.jpg" alt="Farming Practices">
                 <div class="btn-text">
@@ -100,9 +181,9 @@
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="Html/index.html">Home</a></li>
-                    <li><a href="Html/learn.html">Learn more</a></li>
-                    <li><a href="Html/practices.html">Agroecological practices</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#learn">Learn More</a></li>
+                    <li><a href="Html/practices.html">Agroecological Practices</a></li>
                     <li><a href="Html/library.html">Library</a></li>
                     <li><a href="Html/forum.html">Forum</a></li>
                 </ul>
